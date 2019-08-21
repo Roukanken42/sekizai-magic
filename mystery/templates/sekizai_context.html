@@ -1,0 +1,22 @@
+{% load sekizai_tags %}
+{% load test_tags %}
+
+{% sekizai_context "test" %} <br> <br>
+
+{% sekizai_context_insert "test" "0" %}
+{% sekizai_context "test" %} <br> <br>
+
+{% render_block "test" %} <br> <br>
+{% sekizai_context "test" %} <br> <br>
+
+
+{% sekizai_context_insert "test" "1" %}
+{% sekizai_context "test" %} <br> <br>
+
+{% addtoblock "test" %}Sekizai !{% endaddtoblock %}
+{% sekizai_context "test" %} <br> <br>
+
+{% sekizai_context_insert "test" "2" %}
+{% sekizai_context "test" %} <br> <br>
+{% sekizai_context_insert "test" "3" %}
+{% sekizai_context "test" %} <br> <br>
